@@ -33,3 +33,5 @@ if (age >= 25) {
 } else {
     console.log("byy");
 }
+
+age <= 18 ? console.log("adult") : console.log("not adult");
