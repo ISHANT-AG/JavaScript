@@ -29,3 +29,27 @@ function sums(x,y) {
     console.log("after return")
 }
 
+//arrow function (Modern JS)
+
+const arrowsum = (a,b) => {
+    console.log(a+b);
+};
+
+arrowsum(4,5);
+
+const arrowmul = (a,b) => {
+    console.log(a*b);
+}
+
+arrowmul(4,2);
+
+//practice 1
+function vowel(str) {
+    let count = 0;
+    for(const char of str) {
+        if(char ==="a" || char === "e" || char === "o" || char === "u" || char === "i" ) {
+            count++;
+        }
+    }
+    return count;
+}
