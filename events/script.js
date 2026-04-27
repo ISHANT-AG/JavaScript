@@ -25,5 +25,5 @@ const handler2 = () => {
 };
 
 btn1.addEventListener("click", handler2);
-//callback reference should be same
+//callback reference should same
 btn1.removeEventListener("click", handler2 );
