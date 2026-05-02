@@ -20,3 +20,6 @@ const karanArjun = {
         console.log("tax is 20%");
     },
 };
+
+karanArjun.__proto__ = employee;
+
