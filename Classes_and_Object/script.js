@@ -23,3 +23,17 @@ const karanArjun = {
 
 karanArjun.__proto__ = employee;
 
+//CLASSES
+
+class KIA_Car {
+    stop () {
+    Console.log("stop");
+    }
+
+    start () {
+    Console.log("start");
+    }
+}
+
+let fortuner = new KIA_Car();
+let LEXUS = new KIA_Car();
