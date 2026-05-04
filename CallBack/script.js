@@ -26,17 +26,38 @@ calculator(1,2,sum);
 
 //ok-ji-ok
 
-function getdata(DataID,getNextData) {//2s
-    setTimeout(() => {
-         console.log("DATA =", DataID);
-         if (getNextData) {
-            getNextData();
-         }
-    }, 2000);
+function getdata(DataID,getNextData) {
+    return new Promise ((resolve, reject)=> {
+        setTimeout(()=> {
+            console.log("data",DataID);
+            resolve("Success");
+            if (getNextData) {
+              getNextData();
+            }
+        },5000);
+    });
 }
+
 //callback Hell -------> pyramid doom
  getdata(1, () => {
     getdata(2, () => {
         getdata (3);
     });
  });
+
+
+ function asyncFunc() {
+   return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("Some data1");
+        resolve("success")
+    },4000);
+   });
+ }
+console.log("fetching data1");
+ let p1 = asyncFunc();
+ p1.then((res) => {
+    console.log(res);
+ });
+
+ 
