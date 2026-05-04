@@ -60,4 +60,15 @@ console.log("fetching data1");
     console.log(res);
  });
 
- 
+ function api() {
+    return new promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Weather data");
+            resolve(200);
+        },2000);
+    });
+ }
+
+ async function getWeatherData() {
+    await api();
+ }
